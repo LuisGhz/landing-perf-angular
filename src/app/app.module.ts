@@ -4,6 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgChartsModule } from 'ng2-charts';
 import { SwiperModule } from 'swiper/angular';
 
+// Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
@@ -14,6 +15,9 @@ import { StatsComponent } from './components/stats/stats.component';
 import { IntegrationsComponent } from './components/integrations/integrations.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { ContactComponent } from './components/contact/contact.component';
+
+// Pipes
+import { CalcTimeAgoPipe } from './pipes/calc-time-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,7 @@ import { ContactComponent } from './components/contact/contact.component';
     IntegrationsComponent,
     CustomersComponent,
     ContactComponent,
+    CalcTimeAgoPipe
   ],
   imports: [
     BrowserModule,
