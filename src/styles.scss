@@ -8,3 +8,12 @@
 @import 'swiper/scss';
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
+
+.section {
+  opacity: 0;
+  transition: opacity 500ms ease-out 200ms;
+}
+
+.section-visible {
+  opacity: 1;
+}

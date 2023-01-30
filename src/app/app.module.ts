@@ -19,6 +19,9 @@ import { ContactComponent } from './components/contact/contact.component';
 // Pipes
 import { CalcTimeAgoPipe } from './pipes/calc-time-ago.pipe';
 
+// Directives
+import { ObserveElementDirective } from './directives/observe-element.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,8 @@ import { CalcTimeAgoPipe } from './pipes/calc-time-ago.pipe';
     IntegrationsComponent,
     CustomersComponent,
     ContactComponent,
-    CalcTimeAgoPipe
+    CalcTimeAgoPipe,
+    ObserveElementDirective
   ],
   imports: [
     BrowserModule,
