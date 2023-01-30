@@ -26,16 +26,10 @@ export class ObserveElementDirective implements AfterViewInit, OnDestroy {
 
     this.#observer = new IntersectionObserver((entries) => {
       const { isIntersecting } = entries[0];
-      if (
-        isIntersecting &&
-        !this._element.nativeElement.classList.contains(this.visibleClass)
-      )
+      if (isIntersecting && !this.#hasVisibleClass())
         this._renderer.addClass(this._element.nativeElement, this.visibleClass);
 
-      if (
-        !isIntersecting &&
-        this._element.nativeElement.classList.contains(this.visibleClass)
-      )
+      if (!isIntersecting && this.#hasVisibleClass())
         this._renderer.removeClass(
           this._element.nativeElement,
           this.visibleClass
@@ -43,6 +37,10 @@ export class ObserveElementDirective implements AfterViewInit, OnDestroy {
     });
 
     this.#observer.observe(this._element.nativeElement);
+  }
+
+  #hasVisibleClass() {
+    return this._element.nativeElement.classList.contains(this.visibleClass);
   }
 
   ngOnDestroy(): void {
