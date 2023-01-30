@@ -11,4 +11,10 @@ export class NavbarComponent {
   showMobileMenu = false;
 
   constructor() {}
+
+  hideMobileMenu(): void {
+    setTimeout(() => {
+      this.showMobileMenu = false;
+    }, 100)
+  }
 }
