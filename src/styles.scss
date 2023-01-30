@@ -9,6 +9,10 @@
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
 
+html {
+  scroll-behavior: smooth;
+}
+
 .section {
   opacity: 0;
   transition: opacity 500ms ease-out 200ms;
