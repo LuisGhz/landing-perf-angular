@@ -12,7 +12,10 @@
     "test": "ng test",
     "lhci": "npm run build && lhci autorun --config=lighthouserc.js",
     "lhci:ssr": "npm run build:ssr && lhci autorun --config=lighthouserc-ssr.js",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "images": "npm run images:resize && npm run images:compress",
+    "images:resize": "node scripts/resize.mjs",
+    "images:compress": "node scripts/compress.mjs"
   },
   "private": true,
   "dependencies": {
@@ -29,8 +32,12 @@
     "@fortawesome/free-solid-svg-icons": "6.1.1",
     "chart.js": "3.8.0",
     "date-fns": "2.29.3",
+    "imagemin": "^8.0.1",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^8.0.0",
     "ng2-charts": "3.1.2",
     "rxjs": "7.5.0",
+    "sharp": "^0.31.3",
     "swiper": "8.3.0",
     "tslib": "2.3.0",
     "zone.js": "0.11.4"
