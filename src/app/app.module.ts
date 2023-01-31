@@ -15,6 +15,7 @@ import { StatsComponent } from './components/stats/stats.component';
 import { IntegrationsComponent } from './components/integrations/integrations.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ImgComponent } from './components/img/img.component';
 
 // Pipes
 import { CalcTimeAgoPipe } from './pipes/calc-time-ago.pipe';
@@ -35,7 +36,8 @@ import { ObserveElementDirective } from './directives/observe-element.directive'
     CustomersComponent,
     ContactComponent,
     CalcTimeAgoPipe,
-    ObserveElementDirective
+    ObserveElementDirective,
+    ImgComponent
   ],
   imports: [
     BrowserModule,
