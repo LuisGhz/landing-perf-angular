@@ -2,13 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
-
-interface Customer {
-  title: string;
-  date: Date;
-  text: string;
-  image: string;
-}
+import { Customer } from 'src/app/models/customer.model';
 
 @Component({
   selector: 'app-customers',
