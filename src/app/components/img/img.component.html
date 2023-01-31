@@ -1,1 +1,8 @@
-<p>img works!</p>
+<picture>
+  <source
+    *ngFor="let source of sources"
+    [srcset]="source.src"
+    [media]="source.media"
+  />
+  <img [src]="src" [alt]="alt" loading="lazy" decoding="async" />
+</picture>
