@@ -1,41 +1,49 @@
 <app-navbar></app-navbar>
 <app-hero
-  appObserveElement
-  hiddenClass="section"
-  visibleClass="section-visible"
+  class="section"
+  appIntersectionElement
+  (isIntersected)="updateSectionVisibility('hero', $event)"
+  [ngClass]="{ 'section--visible': elements['hero'] }"
 ></app-hero>
 <app-summary
-  appObserveElement
-  hiddenClass="section"
-  visibleClass="section-visible"
+  class="section"
+  appIntersectionElement
+  (isIntersected)="updateSectionVisibility('summary', $event)"
+  [ngClass]="{ 'section--visible': elements['summary'] }"
 ></app-summary>
 <app-snippets
-  appObserveElement
-  hiddenClass="section"
-  visibleClass="section-visible"
+  class="section"
+  appIntersectionElement
+  (isIntersected)="updateSectionVisibility('snippets', $event)"
+  [ngClass]="{ 'section--visible': elements['snippets'] }"
 ></app-snippets>
 <app-features
-  appObserveElement
-  hiddenClass="section"
-  visibleClass="section-visible"
+  class="section"
+  appIntersectionElement
+  (isIntersected)="updateSectionVisibility('features', $event)"
+  [ngClass]="{ 'section--visible': elements['features'] }"
 ></app-features>
 <app-stats
-  appObserveElement
-  hiddenClass="section"
-  visibleClass="section-visible"
+  class="section"
+  appIntersectionElement
+  (isIntersected)="updateSectionVisibility('stats', $event)"
+  [ngClass]="{ 'section--visible': elements['stats'] }"
 ></app-stats>
 <app-integrations
-  appObserveElement
-  hiddenClass="section"
-  visibleClass="section-visible"
+  class="section"
+  appIntersectionElement
+  (isIntersected)="updateSectionVisibility('integrations', $event)"
+  [ngClass]="{ 'section--visible': elements['integrations'] }"
 ></app-integrations>
 <app-customers
-  appObserveElement
-  hiddenClass="section"
-  visibleClass="section-visible"
+  class="section"
+  appIntersectionElement
+  (isIntersected)="updateSectionVisibility('customers', $event)"
+  [ngClass]="{ 'section--visible': elements['customers'] }"
 ></app-customers>
 <app-contact
-  appObserveElement
-  hiddenClass="section"
-  visibleClass="section-visible"
+  class="section"
+  appIntersectionElement
+  (isIntersected)="updateSectionVisibility('contact', $event)"
+  [ngClass]="{ 'section--visible': elements['contacts'] }"
 ></app-contact>

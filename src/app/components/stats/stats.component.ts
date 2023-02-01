@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { ChartOptions } from 'chart.js';
 
 @Component({
@@ -13,6 +14,8 @@ export class StatsComponent {
   dataSet4 = this.getGeneratedLineData(this.randomArray(30, 1000));
   dataSet5 = this.getGeneratedBarData(this.randomArray(30, 1000));
   dataSet6 = this.getGeneratedLineData(this.randomArray(30, 1000));
+
+  isBrowser = isPlatformBrowser(this._platformId);
 
   lineChartOptions: ChartOptions<'line'> = {
     responsive: false,
@@ -34,7 +37,7 @@ export class StatsComponent {
     },
   };
 
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private _platformId: any) {}
 
   randomArray(length: number, max: number) {
     return Array.apply(null, Array(length)).map(function () {

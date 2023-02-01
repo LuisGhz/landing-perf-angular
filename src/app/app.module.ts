@@ -21,7 +21,7 @@ import { ImgComponent } from './components/img/img.component';
 import { CalcTimeAgoPipe } from './pipes/calc-time-ago.pipe';
 
 // Directives
-import { ObserveElementDirective } from './directives/observe-element.directive';
+import { IntersectionElementDirective } from './directives/intersection-element.directive';
 
 @NgModule({
   declarations: [
@@ -36,11 +36,11 @@ import { ObserveElementDirective } from './directives/observe-element.directive'
     CustomersComponent,
     ContactComponent,
     CalcTimeAgoPipe,
-    ObserveElementDirective,
-    ImgComponent
+    ImgComponent,
+    IntersectionElementDirective
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NgChartsModule,
     FontAwesomeModule,
     SwiperModule,
