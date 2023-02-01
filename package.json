@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "serve:client": "http-server ./dist/landing-perf-angular/browser -p 8080",
-    "build": "ng build",
+    "build-dev": "ng build",
     "build:stats": "ng build --stats-json",
     "analyze": "npm run build:stats && webpack-bundle-analyzer dist/landing-perf-angular/stats.json",
     "watch": "ng build --watch --configuration development",
@@ -19,7 +19,8 @@
     "dev:ssr": "ng run landing-perf-angular:serve-ssr",
     "serve:ssr": "node dist/landing-perf-angular/server/main.js",
     "build:ssr": "ng build && ng run landing-perf-angular:server",
-    "prerender": "ng run landing-perf-angular:prerender"
+    "prerender": "ng run landing-perf-angular:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
