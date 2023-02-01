@@ -8,6 +8,7 @@ import { Source } from 'src/app/models/source.model';
 export class ImgComponent implements AfterContentInit {
   @Input() alt: string = '';
   @Input() src: string = '';
+  @Input() isLazy: boolean = true;
   sources: Source[] = [];
 
   ngAfterContentInit(): void {
