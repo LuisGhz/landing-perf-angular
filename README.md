@@ -187,6 +187,8 @@ Se espera que al implementar SSR los puntajes esperados aumenten así:
 
 Desplegar la aplicación en alguno de los siguientes servicios: GitHub Pages, Netlify, Vercel, Firebase Hosting.
 
+[Deploy en vercel con Angular SSR](https://dev.to/jdgamble555/how-to-deploy-angular-universal-to-vercel-31d0)
+
 ## Como enviar tu solución
 
 Debes de hacer un "Fork" de este proyecto, revolver los problemas y crear un Pull Request hacia este repositorio.
